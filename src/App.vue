@@ -2,6 +2,7 @@
   <v-app>
     <v-app-bar
         class="white"
+        height="100"
     >
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
       <v-toolbar-title>
@@ -40,7 +41,7 @@
       <v-container>
         <div class="d-flex mb-6">
           <v-icon class="mr-2">mdi-cog</v-icon>
-          <h2> User Settings </h2>
+          <h2> Settings </h2>
         </div>
 
         <div class="mb-6">
@@ -57,6 +58,13 @@
             <h4> Auto Login </h4>
             <v-switch hide-details small/>
           </v-card>
+
+          <transition name="fade" mode="out-in">
+            <v-btn class="mt-3 accent black--text" depressed @click="logOut" v-if="loggedIn">
+              <v-icon class="mr-2">mdi-logout</v-icon>
+              <h4> Logout </h4>
+            </v-btn>
+          </transition>
         </div>
 
         <div class="mb-6">
@@ -82,11 +90,26 @@
 </template>
 
 <script>
+import {mapState} from "vuex";
+
 export default {
   data: () => ({
     drawer: false,
     group: null,
   }),
+
+  methods: {
+    logOut() {
+      this.$store.commit("logOut")
+      this.drawer = false
+    }
+  },
+
+  computed: {
+    ...mapState({
+      loggedIn: state => state.loggedIn
+    })
+  },
 }
 </script>
 
@@ -100,7 +123,7 @@ export default {
 }
 
 .v-toolbar {
-  height: 55px !important;
+  height: 100px !important;
   flex: none !important;
 }
 </style>
