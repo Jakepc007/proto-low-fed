@@ -205,6 +205,19 @@ export default {
     accounts: []
   }),
 
+  created() {
+    if (this.role !== 'customer') {
+      switch (this.role) {
+        case 'employee':
+          this.$router.push('/projects')
+          break;
+        case 'admin':
+          this.$router.push('/manage-users')
+          break
+      }
+    }
+  },
+
   methods: {
     logOut() {
       this.$store.commit("logOut")
