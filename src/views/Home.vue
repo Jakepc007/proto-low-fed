@@ -9,7 +9,7 @@
 
       <div class="order-grid">
         <v-btn class="black--text" color="primary" @click="orderItem(price, title)">Order</v-btn>
-        <v-btn class="white--text" color="secondary" href="mailto:peri@gmail.com">Contact Sales</v-btn>
+        <v-btn class="white--text" color="secondary" href="mailto:peritest@gmail.com">Contact Sales</v-btn>
       </div>
 
       <v-dialog
