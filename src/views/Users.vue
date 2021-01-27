@@ -58,7 +58,7 @@
                     <v-select
                         :items="['design', 'engineering']"
                         v-model="editedItem.job"
-                        label="Role"
+                        label="Job"
                     />
                   </div>
                 </v-container>
@@ -175,6 +175,11 @@ export default {
       this.users = [
         {
           name: 'Jeff Smith',
+          role: 'employee',
+          job: 'design'
+        },
+        {
+          name: 'Mark Jon3s',
           role: 'employee',
           job: 'design'
         },

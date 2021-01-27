@@ -54,14 +54,6 @@
             <br>
             Estimated Date: <b>{{ project.estDate }}</b>
           </v-card-text>
-          <v-card-actions>
-            <v-btn class="primary--text" text @click="approveProject(project)">
-              Approve
-            </v-btn>
-            <v-btn class="secondary--text" text @click="declineProject(project)">
-              Decline
-            </v-btn>
-          </v-card-actions>
         </v-card>
       </div>
     </div>
@@ -84,14 +76,6 @@
             <br>
             Estimated Date: <b>{{ project.estDate }}</b>
           </v-card-text>
-          <v-card-actions>
-            <v-btn class="primary--text" text @click="approveProject(project)">
-              Approve
-            </v-btn>
-            <v-btn class="secondary--text" text @click="declineProject(project)">
-              Decline
-            </v-btn>
-          </v-card-actions>
         </v-card>
       </div>
     </div>
