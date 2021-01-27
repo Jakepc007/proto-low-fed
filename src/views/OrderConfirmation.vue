@@ -18,8 +18,8 @@
     </v-card>
 
     <div class="order-grid mt-4">
-      <v-btn class="black--text" color="primary">Accept</v-btn>
-      <v-btn class="white--text" color="secondary">Cancel</v-btn>
+      <v-btn class="black--text" color="primary" @click="$router.push({name: 'Home'})">Accept</v-btn>
+      <v-btn class="white--text" color="secondary" @click="$router.push({name: 'Home'})">Cancel</v-btn>
     </div>
   </div>
 </template>
