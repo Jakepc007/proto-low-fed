@@ -111,17 +111,4 @@ export default {
 
 <style lang="scss" scoped>
 
-
-.box {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.5em;
-}
-
-
-.order-grid {
-  display: grid;
-  gap: 1.5em;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-}
 </style>
